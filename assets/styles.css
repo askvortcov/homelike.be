@@ -7,7 +7,8 @@
   --bg-card: #fffaf3;     /* raised surface */
   --ink: #1e2a24;         /* dark green, main text */
   --ink-soft: #4d5a52;    /* secondary text */
-  --accent: #b4552f;      /* muted terracotta */
+  --accent: #b4552f;      /* muted terracotta, for fills and shapes */
+  --accent-ink: #9a4626;  /* darker terracotta, for text on light backgrounds */
   --accent-soft: #e6c4ae;
   --line: #ddd0be;
 
@@ -58,10 +59,10 @@ h3 { font-size: var(--step-h3); line-height: 1.25; }
 p { margin: 0 0 1.15rem; max-width: 62ch; }
 p:last-child { margin-bottom: 0; }
 
-a { color: var(--accent); }
+a { color: var(--accent-ink); }
 
 :focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--accent-ink);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -78,7 +79,7 @@ a { color: var(--accent); }
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-ink);
   margin-bottom: 0.9rem;
 }
 
@@ -109,10 +110,10 @@ a { color: var(--accent); }
   transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
 }
 .button--solid {
-  background: var(--accent);
+  background: var(--accent-ink);
   color: #fff8f2;
 }
-.button--solid:hover { background: #9a4626; }
+.button--solid:hover { background: #7f391e; }
 .button--ghost {
   border-color: var(--line);
   color: var(--ink);
@@ -228,7 +229,7 @@ a { color: var(--accent); }
 .il-bar { fill: none; stroke: var(--ink); stroke-width: 7; }
 .il-sill { fill: var(--ink); }
 .il-pot { fill: var(--accent); }
-.il-pot-rim { fill: #9a4626; }
+.il-pot-rim { fill: var(--accent-ink); }
 .il-stem { fill: none; stroke: #3d5a47; stroke-width: 5; stroke-linecap: round; }
 .il-leaf { fill: #3d5a47; }
 .il-leaf--accent { fill: #6a8a6b; }
@@ -285,7 +286,7 @@ a { color: var(--accent); }
 }
 .principle-no {
   font-family: var(--font-serif);
-  color: var(--accent);
+  color: var(--accent-ink);
   font-size: 1rem;
   letter-spacing: 0.06em;
 }
